@@ -597,9 +597,10 @@ function order() {
 
     // delete
     const deleteOrder = (e) =>{
-        e.preventDefault()       
+        e.preventDefault()     
+        let id = ""  
         dataCust.map((data)=>{
-            let id = data.order_orid
+            id = data.order_orid
         })
         let data = {
             id : id,           
@@ -609,7 +610,7 @@ function order() {
             // saveAnimation = setInterval(() => {
             //     setProgress((prevProgress) => prevProgress >= 100 ? 101 : prevProgress + 10);              
             // }, 10);
-            window.location.href = "/Order"
+            window.location.href = "/Order2"
         })                        
     }
     
@@ -1669,7 +1670,7 @@ function order() {
             aria-describedby = 'alert-dialog-description'
             >
                 {
-                    dataDet.map((data)=>(
+                    dataCust.map((data)=>(
                         <DialogTitle>
                             Delete this order {data.order_orid}
                         </DialogTitle>
